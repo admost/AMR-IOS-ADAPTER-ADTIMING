@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AMRAdapterAdtiming'
-  s.version          = '4.4.1.1'
+  s.version          = '4.4.1.2'
   s.license          = { :type => 'Copyright', :text => <<-LICENSE
 														Copyright 2016
 														Admost Mediation Limited.
@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.platform 			= :ios
   s.ios.deployment_target = '9.0'
   s.vendored_libraries = 'AMRAdapterAdtiming/Libs/libAMRAdapterAdtiming.a'
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64 x86_64' }
   s.dependency 'AMRSDK', '~> 1.5.0'
   s.dependency 'AdTimingSDK', '4.4.1'
 end
